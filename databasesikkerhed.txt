@@ -1,0 +1,12 @@
+Databasesikkerhed:
+
+
+Man kan bruge prepared statements.
+Prepared statements gør at hvis du har et user input, kan du tvinge user inputtet til at blive behandlet som et parameter og ikke en sql linje/sætning.
+Dvs. at når der tilføjes bruger data, vil sql serveren tage det som ren data og ikke sql som skal parses og compiles igen.
+
+
+Du kan skrive kode, hvorpå der ikke kan bruges andet end bogstaver ($table = preg_replace('/[^a-z0-9_]+/i','',array_shift($request));)
+Linjen ovenfor viser en php kode, hvorpå hvis der bliver skrevet andre tegn end a-z og 0-9, vil den erstatte fx ? og / med bogstaver.
+På den måde er det ikke muligt at lave en sql injection da tegnene fa en statement vil blive lavet om til bogstaver og derfor ikke give et resultat i databasen.
+preg_replace erstatter tegn med bogstaver og tal, på den måde kan du ikke få et match på en sql sætning i databasen.

@@ -1,0 +1,24 @@
+For at beskytte brugerdata er det vigtigt at kryptere brugernes adgangskoder, for at gøre det svært for hackere at komme ind på brugerens profil.
+
+Det kan ske ved fx hashing, når du som bruger opretter dig skriver du dit ønskede password og når du oprettes bliver passwordet hashet.
+Et hash er en kryptering af passwordet som ikke kan dekrypteres.
+Når du næste gang skal logge ind, vil du som altid bare skrive dit password, systemet hasher det og sammenligner dit hashet password med hashet password i databasen,
+finder systemet et matchende hash bliver du logget ind.
+
+Man kan også tilføje et salt til hashet, dvs. man ligger en string før eller efter hashet. På denne måde bliver det endnu vanskligere for hackere at identificere passwordet, da de også har en string der skal løses.
+
+I php kan man hashe og salte som vist i filen passwordHash php - i filen findes et par kommentarer til både hash og hashing med salt.
+
+Man kan ogsp bruge symmestrisk kryptering - et eksamepel på symmestrisk kryptering er NemID.
+Ved symmestrisk kryptering har bruger og NemID adgang til samme nøglekort.
+NemID logger du ind og den spørger om kode på et nummer på dit nøglekort, som du herefter taster for at komme ind.
+
+Asymetrisk kryptering er også en mulighed.
+Har findes der to nøgler en offentlig og en privat.
+Den offentlig er tilgængelig men den private bliver ikke afsløret.
+
+
+!!!!(http://www.computerdk.com/Networking/internet-networking/67760.html
+Asymmetrisk kryptering beskæftiger to relaterede krypteringsnøgler , kendt som offentlige og private nøgler .
+Afsenderen passerer den offentlige nøgle via en matematisk formel , eller krypteringsalgoritme , sammen med klartekst , at skabe kodeteksten .
+Modtageren på den anden side , passerer den private nøgle gennem den samme algoritme , sammen med ciphertext , at genskabe den oprindelige klartekst .  )!!!!! udpluk fra givet link..
