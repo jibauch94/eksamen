@@ -5,6 +5,9 @@ Man kan bruge prepared statements.
 Prepared statements gør at hvis du har et user input, kan du tvinge user inputtet til at blive behandlet som et parameter og ikke en sql linje/sætning.
 Dvs. at når der tilføjes bruger data, vil sql serveren tage det som ren data og ikke sql som skal parses og compiles igen.
 
+stored procedures:
+her gemmes oplysninger i databasen
+
 
 Du kan skrive kode, hvorpå der ikke kan bruges andet end bogstaver ($table = preg_replace('/[^a-z0-9_]+/i','',array_shift($request));)
 Linjen ovenfor viser en php kode, hvorpå hvis der bliver skrevet andre tegn end a-z og 0-9, vil den erstatte fx ? og / med bogstaver.
